@@ -8,37 +8,34 @@
 </head>
 <body>
     <h1>Buat Account Baru</h1>
+    <a href="/">kembali ke home</a>
     <h2>Sign Up Form</h2>
 
-    <label>First Name:</label>
-    <input type="text" id="fname" placeholder="Your First Name"><br>  
-    <label>Last Name:</label>
-    <input type="text" id="lname" placeholder="Your Last Name"><br><br>
+    <form action="/welcome" method="POST">
+        @csrf
+    <label>First Name:</label><br>
+    <input type="text" name="fname" placeholder="Your First Name"><br>  
+    <label>Last Name:</label><br>
+    <input type="text" name="lname" placeholder="Your Last Name"><br><br>
 
-    <label>Gender:</label>
-    <form>
-        <label>
-            <input type="radio" name="gender" id="male">
-            Male
-        </label><br>
-        <label>
-            <input type="radio" name="gender" id="female">
-            Female
-        </label>
-    </form>
-    <br>
-    <label>Language Speak:</label>
-    <form>
+    <label>Gender:</label><br>
+    <label>
+        <input type="radio" name="gender" id="male">
+        Male
+    </label><br>
+    <label>
+        <input type="radio" name="gender" id="female">
+        Female
+    </label><br><br>
+    <label>Language Speak:</label><br>
         <input type="checkbox" name="language" id="ina"/><label for="ina">Indonesia</label><br/>
         <input type="checkbox" name="language" id="eng"/><label for="eng">English</label><br/>
         <input type="checkbox" name="language" id="arb"/><label for="arb">Arabic</label><br/>
         <input type="checkbox" name="language" id="jpn"/><label for="jpn">Japanese</label><br/>
-    </form>
     <br>
-    <label>Bio:</label>
-    <form >
-        <textarea  id="bio" rows="5" cols="33"></textarea>
-    </form><br>
-    <input type="button" value="Sign Up">
+    <label>Bio:</label><br>
+    <textarea  id="bio" rows="5" cols="33"></textarea><br>
+    <input type="submit" value="Sign Up">
+    </form>
 </body>
 </html>
