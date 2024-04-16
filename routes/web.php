@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,19 @@ use Illuminate\Support\Facades\Route;
 });
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+// Route::get('/register', function () {
+//     return view('register');
+// });
+
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', [DashboardController::class, 'utama']);
+Route::get('/register', [DashboardController::class, 'daftar']);
+Route::post('/welcome', [DashboardController::class, 'welcome']);
