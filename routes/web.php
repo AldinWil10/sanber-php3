@@ -34,4 +34,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'utama']);
 Route::get('/register', [DashboardController::class, 'daftar']);
+
 Route::post('/welcome', [DashboardController::class, 'welcome']);
+
+Route::get('/index', function () {
+    return view('index');
+});
+
+Route::get('/data-table', function () {
+    return view('partials.data-table');
+});
+
+Route::get('/table', function () {
+    return view('partials.table');
+});

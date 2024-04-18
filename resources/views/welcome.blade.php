@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
-</head>
-<body>
-    <h1>Selamat Datang {{ $namaDepan }}{{ $namaBelakang }}</h1>
-    <h2>Terima Kasih telah bergabung di SanberBook Social Media Kita Bersama</h2>
-</body>
-</html>
+@extends('layouts.master')
+@section('judul')
+Halaman Home
+@endsection
+@section('content')
+Selamat Datang {{ $namaDepan }}{{ $namaBelakang }}
+Terima Kasih telah bergabung di SanberBook Social Media Kita Bersama
+@endsection

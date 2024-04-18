@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
-</head>
-<body>
-    <h1>Buat Account Baru</h1>
+@extends('layouts.master')
+@section('judul')
+    Halaman Biodata
+@endsection
+@section('content')
     <a href="/">kembali ke home</a>
     <h2>Sign Up Form</h2>
 
@@ -37,5 +32,4 @@
     <textarea  id="bio" rows="5" cols="33"></textarea><br>
     <input type="submit" value="Sign Up">
     </form>
-</body>
-</html>
+@endsection
